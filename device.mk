@@ -28,10 +28,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-# Virtual A/B
-ENABLE_VIRTUAL_AB := true
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -53,16 +49,10 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-recovery
 
 PRODUCT_PACKAGES_DEBUG += \
-    bootctrl.mt6768
+    bootctrl.mt6769
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.mt6768 \
-    libgptutils \
-    libz \
-    libcutils
 
 PRODUCT_PACKAGES += \
     otapreopt_script \

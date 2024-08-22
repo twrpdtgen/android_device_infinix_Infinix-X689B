@@ -7,6 +7,20 @@
 
 LOCAL_PATH := device/infinix/X689B
 # A/B
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    lk \
+    preloader \
+    product \
+    system \
+    vbmeta \
+    system_ext \
+    vbmeta_system \
+    vbmeta_vendor \
+    vendor_boot \
+    vendor
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \

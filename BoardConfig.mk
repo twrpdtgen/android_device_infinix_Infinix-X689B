@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/Infinix-X689B
+DEVICE_PATH := device/infinix/X689B
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -41,7 +41,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := Infinix-X689B
+TARGET_BOOTLOADER_BOARD_NAME := X689B
 TARGET_NO_BOOTLOADER := true
 
 # Display
@@ -60,7 +60,7 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_KERNEL_CONFIG := Infinix-X689B_defconfig
-TARGET_KERNEL_SOURCE := kernel/infinix/Infinix-X689B
+TARGET_KERNEL_SOURCE := kernel/infinix/X689B
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true

@@ -9,8 +9,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
+# Inherit some common TWRP stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from X689B device
 $(call inherit-product, device/infinix/X689B/device.mk)
@@ -18,7 +21,7 @@ $(call inherit-product, device/infinix/X689B/device.mk)
 PRODUCT_DEVICE := X689B
 PRODUCT_NAME := twrp_X689B
 PRODUCT_BRAND := Infinix
-PRODUCT_MODEL := X689B
+PRODUCT_MODEL := Infinix Hot 10S
 PRODUCT_MANUFACTURER := INFINIX MOBILITY LIMITED
 
 PRODUCT_GMS_CLIENTID_BASE := android-infinix
